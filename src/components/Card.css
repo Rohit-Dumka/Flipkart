@@ -1,0 +1,15 @@
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.electronics {
+    justify-content: space-between;
+}
+.electronics img{
+    border: 1px solid white;
+    height: 240px;
+    width: 240px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
