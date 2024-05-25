@@ -1,23 +1,21 @@
-import { shimmer_card_unit, shimmer_menu_card_unit } from "../config";
+import React from 'react';
 
-const CardShimmer = () => {
+const LoadingPage = () => {
   return (
-    <div className="shimmer-card" data-testid="shimmer">
-      <div className="shimmer-img stroke animate"></div>
-      <div className="shimmer-title stroke animate"></div>
-      <div className="shimmer-tags stroke animate "></div>
-      <div className="shimmer-details stroke animate "></div>
+    <div className="flex flex-col items-center justify-center h-screen bg-white">
+      <div className="w-full max-w-screen-lg p-4">
+        <div className="animate-pulse">
+          <div className="h-10 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 rounded-md mb-4"></div>
+          <div className="h-64 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 rounded-md"></div>
+          <div className="flex flex-wrap justify-center mt-4 space-x-4">
+            {[1, 2, 3, 4].map((item) => (
+              <div key={item} className="h-48 w-48 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 rounded-md"></div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-const Shimmer = () => {
-  return (
-    <div className="shimmer-container">
-      {new Array(shimmer_card_unit).fill(0).map((element, index) => {
-        return <CardShimmer key={index} />;
-      })}
-    </div>
-  );
-};
-export default Shimmer;
+export default LoadingPage;
